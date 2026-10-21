@@ -1,1 +1,0 @@
-{"name":"explorador-dpi-valentina","private":true,"type":"module","scripts":{"check":"node --check public/app.js","build":"node scripts/check-data.mjs"}}
