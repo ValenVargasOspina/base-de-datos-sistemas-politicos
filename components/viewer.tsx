@@ -15,6 +15,7 @@ import { VariableSelector } from "./variable-selector";
 import { DefinitionPanel } from "./definition-panel";
 import { QuestionsPanel } from "./questions-panel";
 import { AnalysisPreview } from "./analysis-preview";
+import { Charts } from "./charts";
 import type { SeriesPoint } from "@/lib/data";
 
 export interface ViewerProps {
@@ -45,6 +46,7 @@ export function Viewer(props: ViewerProps) {
           <VariableSelector />
           <QuestionsPanel />
           <AnalysisPreview />
+          <Charts />
           <DefinitionPanel />
         </div>
       </div>

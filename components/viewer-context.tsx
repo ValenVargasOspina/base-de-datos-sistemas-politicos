@@ -16,6 +16,9 @@ import {
 import { selectRows, type ProjectedRow } from "@/lib/filter";
 import type { SeriesPoint } from "@/lib/data";
 
+/** Whether charts group/compare by individual country or by whole region. */
+export type GroupMode = "country" | "region";
+
 export interface ViewerState {
   themeId: string;
   variable: string;
@@ -23,6 +26,10 @@ export interface ViewerState {
   selectedRegions: string[];
   yearMin: number;
   yearMax: number;
+  /** Chart grouping: compare individual countries or aggregate by region. */
+  groupMode: GroupMode;
+  /** Year used by the comparison (bar) chart; null = latest with data. */
+  comparisonYear: number | null;
 }
 
 export interface ViewerContextValue extends ViewerState {
@@ -39,6 +46,8 @@ export interface ViewerContextValue extends ViewerState {
   toggleRegion: (region: string) => void;
   clearRegions: () => void;
   setYearRange: (min: number, max: number) => void;
+  setGroupMode: (mode: GroupMode) => void;
+  setComparisonYear: (year: number | null) => void;
   /** Compact series for the active variable (set by the loader on change). */
   series: SeriesPoint[];
   setSeries: (series: SeriesPoint[]) => void;
@@ -73,6 +82,8 @@ export function ViewerProvider({
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [yearMin, setYearMin] = useState(minYear);
   const [yearMax, setYearMax] = useState(maxYear);
+  const [groupMode, setGroupMode] = useState<GroupMode>("country");
+  const [comparisonYear, setComparisonYear] = useState<number | null>(null);
   const [series, setSeries] = useState<SeriesPoint[]>(initialSeries);
 
   const toggleCountry = (country: string) =>
@@ -137,6 +148,8 @@ export function ViewerProvider({
     selectedRegions,
     yearMin,
     yearMax,
+    groupMode,
+    comparisonYear,
     minYear,
     maxYear,
     allCountries,
@@ -150,6 +163,8 @@ export function ViewerProvider({
     toggleRegion,
     clearRegions,
     setYearRange,
+    setGroupMode,
+    setComparisonYear,
     series,
     setSeries,
     filteredRows,

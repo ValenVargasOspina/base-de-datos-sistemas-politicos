@@ -86,8 +86,7 @@ export function AnalysisPreview() {
         .
       </p>
       <p className="mt-3 text-xs text-gray-400">
-        Los gráficos comparativos se añadirán en la siguiente iteración
-        (FEAT-004) y usarán esta misma selección.
+        Los gráficos comparativos de abajo usan esta misma selección.
       </p>
     </section>
   );
