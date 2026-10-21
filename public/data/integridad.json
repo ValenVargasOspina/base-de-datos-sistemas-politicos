@@ -1,0 +1,9 @@
+{
+  "rows": 8200,
+  "columns": 129,
+  "entities": 183,
+  "min_year": 1975,
+  "max_year": 2020,
+  "sha256": "36d98d2b1980da70e3baedb21500f7890cfb8c41358cf7e161c0f65ca6d01381",
+  "roundtrip": "Todas las celdas coinciden tras serializar JSON."
+}
