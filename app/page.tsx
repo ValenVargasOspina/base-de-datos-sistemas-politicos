@@ -1,55 +1,38 @@
-import { readFile } from "node:fs/promises";
-import { join } from "node:path";
-
-type Meta = {
-  recordCount: number;
-  countryCount: number;
-  countries: string[];
-  minYear: number;
-  maxYear: number;
-};
-
-async function loadMeta(): Promise<Meta> {
-  "use cache";
-  const metaPath = join(process.cwd(), "data", "meta.generated.json");
-  const raw = await readFile(metaPath, "utf8");
-  return JSON.parse(raw) as Meta;
-}
+import { THEMES } from "@/lib/themes";
+import { loadMeta, getVariableSeries } from "@/lib/data";
+import { Viewer } from "@/components/viewer";
 
 export default async function Home() {
   const meta = await loadMeta();
 
+  // Initial theme/variable and its compact series. Only this one variable's
+  // series is shipped to the client initially; switching theme/variable loads
+  // the next series via a server action. The 15MB dataset stays on the server.
+  const initialThemeId = THEMES[0].id;
+  const initialVariable = THEMES[0].variables[0];
+  const initialSeries = await getVariableSeries(initialVariable);
+
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-3xl font-bold tracking-tight">Visor DPI2020</h1>
-      <p className="mt-3 text-base text-gray-600 dark:text-gray-300">
-        Visor de la Base de Datos de Instituciones Políticas 2020 (Database of
-        Political Institutions). Explora y compara los sistemas políticos de los
-        países del mundo.
-      </p>
+    <main className="mx-auto max-w-7xl px-6 py-10">
+      <header className="mb-8">
+        <h1 className="text-3xl font-bold tracking-tight">Visor DPI2020</h1>
+        <p className="mt-2 max-w-3xl text-base text-gray-600 dark:text-gray-300">
+          Explora y compara los sistemas políticos de {meta.countryCount} países
+          con la Base de Datos de Instituciones Políticas 2020 (Database of
+          Political Institutions). Filtra por país y región, navega por temas y
+          consulta las definiciones de cada variable. Datos de {meta.minYear} a{" "}
+          {meta.maxYear}.
+        </p>
+      </header>
 
-      <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        <div className="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
-          <dt className="text-sm text-gray-500">Países</dt>
-          <dd className="mt-1 text-2xl font-semibold">{meta.countryCount}</dd>
-        </div>
-        <div className="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
-          <dt className="text-sm text-gray-500">Registros</dt>
-          <dd className="mt-1 text-2xl font-semibold">{meta.recordCount}</dd>
-        </div>
-        <div className="rounded-lg border border-gray-200 p-4 dark:border-gray-700">
-          <dt className="text-sm text-gray-500">Periodo</dt>
-          <dd className="mt-1 text-2xl font-semibold">
-            {meta.minYear}–{meta.maxYear}
-          </dd>
-        </div>
-      </dl>
-
-      <p className="mt-8 text-sm text-gray-500">
-        La base de datos contiene {meta.countryCount} países. Las siguientes
-        funcionalidades (filtros por país y región, temas, gráficos y
-        definiciones de variables) se añadirán en las próximas iteraciones.
-      </p>
+      <Viewer
+        allCountries={meta.countries}
+        minYear={meta.minYear}
+        maxYear={meta.maxYear}
+        initialThemeId={initialThemeId}
+        initialVariable={initialVariable}
+        initialSeries={initialSeries}
+      />
     </main>
   );
 }
