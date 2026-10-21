@@ -1,4 +1,4 @@
-import {guideHTML} from './variable-guide.js';
+import {guideHTML} from './variable-guide.js?v=variables-1';
 const $=id=>document.getElementById(id),esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const stateOf=v=>v===null||v===undefined||v===''?'Vacío':String(v).trim().toUpperCase()==='NA'?'NA':String(v).trim()==='-999'?'Código −999':'Con dato';
 const groups=['Gobierno y Ejecutivo','Gobierno, oposición y coaliciones','Características partidarias','Instituciones electorales','Concentración, controles y estabilidad','Instituciones subnacionales','Identificadores'];
