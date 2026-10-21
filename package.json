@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build:data": "node scripts/build-data.mjs",
-    "prebuild": "npm run build:data",
+    "build:variables": "node scripts/build-variables.mjs",
+    "prebuild": "npm run build:data && npm run build:variables",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",

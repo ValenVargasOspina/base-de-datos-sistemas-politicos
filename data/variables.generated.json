@@ -1,0 +1,776 @@
+[
+  {
+    "column": "countryname",
+    "description": "Country Name",
+    "type": "str15",
+    "choices": ""
+  },
+  {
+    "column": "ifs",
+    "description": "Country Code",
+    "type": "str3",
+    "choices": ""
+  },
+  {
+    "column": "year",
+    "description": "Year",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "system",
+    "description": "Political System",
+    "type": "int",
+    "choices": "presparl"
+  },
+  {
+    "column": "yrsoffc",
+    "description": "Chief Executive Years in Office",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "finittrm",
+    "description": "Finite Term in Office",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "yrcurnt",
+    "description": "Years Left in Current Term",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "termlimit",
+    "description": "Term Limits for Chief Executive",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "reelect",
+    "description": "Chief Executive Eligible for Reelection",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "multpl",
+    "description": "Can Chief Executive Serve Multiple Terms",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "military",
+    "description": "Is Chief Executive a Military Officer?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "defmin",
+    "description": "Is Defense Minister a Military Officer?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "percent1",
+    "description": "President Percentage of Votes, first round",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "percentl",
+    "description": "President Percentage of Votes, last round",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "prtyin",
+    "description": "Party of Chief Executive Length of Time in Office",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "execme",
+    "description": "Name of Executive Party",
+    "type": "str26",
+    "choices": ""
+  },
+  {
+    "column": "execrlc",
+    "description": "Chief Executive Party Orientation",
+    "type": "int",
+    "choices": "rlc"
+  },
+  {
+    "column": "execnat",
+    "description": "Chief Executive Party: Nationalist",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "execrurl",
+    "description": "Chief Executive Party: Rural",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "execreg",
+    "description": "Chief Executive Party: Regional",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "execrel",
+    "description": "Chief Executive Party: Religious",
+    "type": "int",
+    "choices": "rel"
+  },
+  {
+    "column": "execage",
+    "description": "Age of Chief Executive Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "allhouse",
+    "description": "Does Party of Executive Control All Houses?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "nonchief",
+    "description": "Party affiliation of Non-Chief Executive in Systems with both President and PM",
+    "type": "str14",
+    "choices": ""
+  },
+  {
+    "column": "totalseats",
+    "description": "Total Seats in Legislature",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov1me",
+    "description": "Name of Largest Government Party",
+    "type": "str37",
+    "choices": ""
+  },
+  {
+    "column": "gov1seat",
+    "description": "Number of Seats of Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov1vote",
+    "description": "Vote Share of Largest Government Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "gov1rlc",
+    "description": "Largest Government Party Orientation",
+    "type": "int",
+    "choices": "rlc"
+  },
+  {
+    "column": "gov1nat",
+    "description": "Largest Government Party: Nationalist",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov1rurl",
+    "description": "Largest Government Party: Rural",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov1reg",
+    "description": "Largest Government Party: Regional",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov1rel",
+    "description": "Largest Government Party: Religious",
+    "type": "int",
+    "choices": "rel"
+  },
+  {
+    "column": "gov1age",
+    "description": "Age of Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov2me",
+    "description": "Name of 2nd Largest Government Party",
+    "type": "str37",
+    "choices": ""
+  },
+  {
+    "column": "gov2seat",
+    "description": "Number of Seats of 2nd Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov2vote",
+    "description": "Vote Share of 2nd Largest Government Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "gov2rlc",
+    "description": "2nd Largest Government Party Orientation",
+    "type": "int",
+    "choices": "rlc"
+  },
+  {
+    "column": "gov2nat",
+    "description": "2nd Largest Government Party: Nationalist",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov2rurl",
+    "description": "2nd Largest Government Party: Rural",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov2reg",
+    "description": "2nd Largest Government Party: Regional",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov2rel",
+    "description": "2nd Largest Government Party: Religious",
+    "type": "int",
+    "choices": "rel"
+  },
+  {
+    "column": "gov2age",
+    "description": "Age of 2nd Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov3me",
+    "description": "Name of 3rd Largest Government Party",
+    "type": "str51",
+    "choices": ""
+  },
+  {
+    "column": "gov3seat",
+    "description": "Number of Seats of 3rd Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov3vote",
+    "description": "Vote Share of 3rd Largest Government Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "gov3rlc",
+    "description": "3rd Largest Government Party Orientation",
+    "type": "int",
+    "choices": "rlc"
+  },
+  {
+    "column": "gov3nat",
+    "description": "3rd Largest Government Party: Nationalist",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov3rurl",
+    "description": "3rd Largest Government Party: Rural",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov3reg",
+    "description": "3rd Largest Government Party: Regional",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gov3rel",
+    "description": "3rd Largest Government Party: Religious",
+    "type": "int",
+    "choices": "rel"
+  },
+  {
+    "column": "gov3age",
+    "description": "Age of 3rd Largest Government Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "govoth",
+    "description": "Number of Other Government Parties",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "govothst",
+    "description": "Number of Seats of Other Government Parties",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "govothvt",
+    "description": "Vote Share of Other Government Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "opp1me",
+    "description": "Name of Largest Opposition Party",
+    "type": "str61",
+    "choices": ""
+  },
+  {
+    "column": "opp1seat",
+    "description": "Number of Seats of Largest Opposition Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp1vote",
+    "description": "Vote Share of Largest Opposition Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "opp1rlc",
+    "description": "Largest Opposition Party Orientation",
+    "type": "int",
+    "choices": "rlc"
+  },
+  {
+    "column": "opp1nat",
+    "description": "Largest Opposition Party: Nationalist",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp1rurl",
+    "description": "Largest Opposition Party: Rural",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp1reg",
+    "description": "Largest Opposition Party: Regional",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp1rel",
+    "description": "Largest Opposition Party: Religious",
+    "type": "int",
+    "choices": "rel"
+  },
+  {
+    "column": "opp1age",
+    "description": "Age of Largest Opposition Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp2me",
+    "description": "Name of 2nd Largest Opposition Party",
+    "type": "str31",
+    "choices": ""
+  },
+  {
+    "column": "opp2seat",
+    "description": "Number of Seats of 2nd Largest Opposition Party",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "opp2vote",
+    "description": "Vote Share of 2nd Largest Opposition Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "opp3me",
+    "description": "Name of 3rd Largest Opposition Party",
+    "type": "str38",
+    "choices": ""
+  },
+  {
+    "column": "opp3seat",
+    "description": "Number of Seats of 3rd Largest Opposition Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "opp3vote",
+    "description": "Vote Share of 3rd Largest Opposition Party",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "oppoth",
+    "description": "Number of Other Opposition Parties",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "oppothst",
+    "description": "Number of Seats of Other Opposition Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "oppothvt",
+    "description": "Number of Votes of Other Opposition Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "ulprty",
+    "description": "Number of Non-Aligned Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "numul",
+    "description": "Number of Seats of Non-Aligned Parties",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "ulvote",
+    "description": "Vote Share of Non-Aligned Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "oppmajh",
+    "description": "Does One Opposition Party have a Majority in the House?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "oppmajs",
+    "description": "Does One Opposition Party have a Majority in the Senate?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "dateleg",
+    "description": "Month Legislative Elections Held",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "dateexec",
+    "description": "Month Presidential Elections Held",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "legelec",
+    "description": "Legislative Election Held",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "exelec",
+    "description": "Presidential Election Held",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "liec",
+    "description": "Legislative Electoral Competitiveness",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "eiec",
+    "description": "Executive Electoral Competitiveness",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "mdmh",
+    "description": "Mean District Magnitude House",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "mdms",
+    "description": "Mean District Magnitude Senate",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "ssh",
+    "description": "Number of Seats in Senate/Total Seats in Both Houses",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "pluralty",
+    "description": "Plurality",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "pr",
+    "description": "Proportional Representation",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "housesys",
+    "description": "Electoral Rule House",
+    "type": "float",
+    "choices": "sys"
+  },
+  {
+    "column": "sensys",
+    "description": "Electoral Rule Senate",
+    "type": "float",
+    "choices": "sys"
+  },
+  {
+    "column": "thresh",
+    "description": "Vote Threshold",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "dhondt",
+    "description": "D'Hondt System",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "cl",
+    "description": "Closed List",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "select",
+    "description": "Candidate Selection",
+    "type": "int",
+    "choices": "candidate"
+  },
+  {
+    "column": "gq",
+    "description": "GQ",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gqi",
+    "description": "GQI",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "fraud",
+    "description": "Vote Fraud",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "auton",
+    "description": "Autonomous Regions",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "muni",
+    "description": "Municipal Government",
+    "type": "int",
+    "choices": "fed"
+  },
+  {
+    "column": "state",
+    "description": "State Government",
+    "type": "int",
+    "choices": "fed"
+  },
+  {
+    "column": "author",
+    "description": "State Government Authority over Taxing, Spending, or Legislating",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "stconst",
+    "description": "Are the Constituencies of the Senators the States/Provinces?",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "gwno",
+    "description": "",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "numgov",
+    "description": "Number of Government Seats",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "numvote",
+    "description": "Vote Share of Government Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "numopp",
+    "description": "Number of Opposition Seats",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "oppvote",
+    "description": "Vote Share of Opposition Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "maj",
+    "description": "Margin of Majority",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "partyage",
+    "description": "Average Age of Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "herfgov",
+    "description": "Herfindahl Index of Government Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "herfopp",
+    "description": "Herfindahl Index of Opposition Parties",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "herftot",
+    "description": "Herfindahl Index Total",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "frac",
+    "description": "Fractionalization Index",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "oppfrac",
+    "description": "Opposition Fractionalization Index",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "govfrac",
+    "description": "Government Fractionalization Index",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "tensys_strict",
+    "description": "",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "tensys",
+    "description": "System Tenure",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "checks_lax",
+    "description": "",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "checks",
+    "description": "Checks and Balances",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "stabs_strict",
+    "description": "Stability (Threshold: LIEC = 6)",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "stabs",
+    "description": "Stability",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "stabns_strict",
+    "description": "Stability, single chamber (Threshold: LIEC = 6)",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "stabns",
+    "description": "Stability, single chamber",
+    "type": "float",
+    "choices": ""
+  },
+  {
+    "column": "tenlong_strict",
+    "description": "Longest Tenure of a Veto Player (Threshold: LIEC = 6)",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "tenlong",
+    "description": "Longest Tenure of a Veto Player",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "tenshort_strict",
+    "description": "Shortest Tenure of a Veto Player (Threshold: LIEC = 6)",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "tenshort",
+    "description": "Shortest Tenure of a Veto Player",
+    "type": "int",
+    "choices": ""
+  },
+  {
+    "column": "polariz",
+    "description": "Polarization",
+    "type": "int",
+    "choices": ""
+  }
+]
