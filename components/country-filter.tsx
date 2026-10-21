@@ -2,8 +2,8 @@
 
 // Country filter: a searchable multi-select listing every dataset country by
 // its Spanish display name. Supports selecting several countries for comparison
-// and a "Ver todos los países" toggle that clears the selection (empty =
-// todos). The selected regions narrow which countries are offered.
+// and a single "Ver todos los países" control that clears the selection
+// (empty = todos). The selected regions narrow which countries are offered.
 
 import { useMemo, useState } from "react";
 import { getDisplayName, getRegion } from "@/lib/regions";
@@ -16,7 +16,6 @@ export function CountryFilter() {
     selectedRegions,
     toggleCountry,
     selectAllCountries,
-    clearCountries,
   } = useViewer();
   const [query, setQuery] = useState("");
 
@@ -64,6 +63,7 @@ export function CountryFilter() {
           type="button"
           onClick={selectAllCountries}
           aria-pressed={seeingAll}
+          disabled={seeingAll}
           className={`rounded-md px-2 py-1 text-xs font-medium ${
             seeingAll
               ? "bg-blue-600 text-white"
@@ -71,14 +71,6 @@ export function CountryFilter() {
           }`}
         >
           Ver todos los países
-        </button>
-        <button
-          type="button"
-          onClick={clearCountries}
-          className="rounded-md bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700 hover:bg-gray-200 disabled:opacity-50 dark:bg-gray-800 dark:text-gray-200"
-          disabled={seeingAll}
-        >
-          Limpiar selección
         </button>
       </div>
 

@@ -41,7 +41,6 @@ export interface ViewerContextValue extends ViewerState {
   setSelectedCountries: (countries: string[]) => void;
   toggleCountry: (country: string) => void;
   selectAllCountries: () => void;
-  clearCountries: () => void;
   setSelectedRegions: (regions: string[]) => void;
   toggleRegion: (region: string) => void;
   clearRegions: () => void;
@@ -76,8 +75,8 @@ export function ViewerProvider({
   initialVariable,
   initialSeries,
 }: ViewerProviderProps) {
-  const [themeId, setThemeId] = useState(initialThemeId);
-  const [variable, setVariable] = useState(initialVariable);
+  const [themeId, setThemeIdState] = useState(initialThemeId);
+  const [variable, setVariableState] = useState(initialVariable);
   const [selectedCountries, setSelectedCountries] = useState<string[]>([]);
   const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [yearMin, setYearMin] = useState(minYear);
@@ -85,6 +84,19 @@ export function ViewerProvider({
   const [groupMode, setGroupMode] = useState<GroupMode>("country");
   const [comparisonYear, setComparisonYear] = useState<number | null>(null);
   const [series, setSeries] = useState<SeriesPoint[]>(initialSeries);
+
+  // Changing the active variable or theme invalidates any pinned comparison
+  // year: the retained year may have no data for the new variable, which would
+  // leave the comparison chart stuck in its empty state instead of falling back
+  // to the latest year that does have data. Reset to null (= latest with data).
+  const setVariable = (column: string) => {
+    setVariableState(column);
+    setComparisonYear(null);
+  };
+  const setThemeId = (id: string) => {
+    setThemeIdState(id);
+    setComparisonYear(null);
+  };
 
   const toggleCountry = (country: string) =>
     setSelectedCountries((prev) =>
@@ -94,7 +106,6 @@ export function ViewerProvider({
     );
 
   const selectAllCountries = () => setSelectedCountries([]); // empty = all
-  const clearCountries = () => setSelectedCountries([]);
 
   const toggleRegion = (region: string) =>
     setSelectedRegions((prev) =>
@@ -158,7 +169,6 @@ export function ViewerProvider({
     setSelectedCountries,
     toggleCountry,
     selectAllCountries,
-    clearCountries,
     setSelectedRegions,
     toggleRegion,
     clearRegions,

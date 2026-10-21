@@ -14,7 +14,11 @@ import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import xlsxPkg from "xlsx";
-import { serialToYear, normalizeValue } from "../lib/transform.mjs";
+import {
+  projectMatrix,
+  validateYearRange,
+  collectCountries,
+} from "../lib/build-pipeline.mjs";
 
 const XLSX = xlsxPkg.default || xlsxPkg;
 
@@ -35,94 +39,16 @@ function main() {
   const ws = wb.Sheets[sheetName];
 
   const matrix = XLSX.utils.sheet_to_json(ws, { header: 1, raw: true });
-  if (!matrix.length) {
-    throw new Error("[build-data] sheet is empty");
-  }
 
-  const header = matrix[0].map((h) => String(h).trim());
-  if (header.length !== 129) {
-    throw new Error(
-      `[build-data] expected 129 columns, found ${header.length}`,
-    );
-  }
-  const yearIdx = header.indexOf("year");
-  const countryIdx = header.indexOf("countryname");
-  const ifsIdx = header.indexOf("ifs");
-  if (yearIdx === -1 || countryIdx === -1 || ifsIdx === -1) {
-    throw new Error(
-      "[build-data] missing required columns countryname/ifs/year",
-    );
-  }
-
-  const records = [];
-  for (let r = 1; r < matrix.length; r++) {
-    const row = matrix[r];
-    // Skip fully empty trailing rows if any.
-    if (!row || row.every((c) => c === undefined || c === null || c === "")) {
-      continue;
-    }
-
-    const obj = {};
-    for (let c = 0; c < header.length; c++) {
-      const key = header[c];
-      const raw = row[c];
-
-      if (c === yearIdx) {
-        if (raw === undefined || raw === null || raw === "") {
-          obj[key] = null;
-        } else {
-          obj[key] = serialToYear(raw);
-        }
-        continue;
-      }
-
-      if (c === countryIdx) {
-        // countryname is always carried through as a trimmed string.
-        obj[key] = raw === undefined || raw === null ? null : String(raw).trim();
-        continue;
-      }
-
-      if (c === ifsIdx) {
-        // ifs is unreliable but carried through as-is (string).
-        obj[key] = raw === undefined || raw === null ? null : String(raw).trim();
-        continue;
-      }
-
-      obj[key] = normalizeValue(raw);
-    }
-    records.push(obj);
-  }
+  // Header validation, row projection and the missing-value contract all live
+  // in lib/build-pipeline.mjs so they can be unit-tested without the workbook.
+  const { header, records } = projectMatrix(matrix);
 
   // Validate year range so a bad Excel-serial parse fails the build loudly.
-  const years = records
-    .map((rec) => rec.year)
-    .filter((y) => typeof y === "number" && Number.isFinite(y));
-  if (!years.length) {
-    throw new Error("[build-data] no valid years parsed");
-  }
-  const minYear = Math.min(...years);
-  const maxYear = Math.max(...years);
-  if (minYear < 1974 || minYear > 1976) {
-    throw new Error(
-      `[build-data] unexpected min year ${minYear} (expected ~1975); year parse likely wrong`,
-    );
-  }
-  if (maxYear < 2019 || maxYear > 2021) {
-    throw new Error(
-      `[build-data] unexpected max year ${maxYear} (expected ~2020); year parse likely wrong`,
-    );
-  }
+  const { minYear, maxYear } = validateYearRange(records);
 
   // Distinct, sorted country list.
-  const countrySet = new Set();
-  for (const rec of records) {
-    if (rec.countryname) {
-      countrySet.add(rec.countryname);
-    }
-  }
-  const countries = [...countrySet].sort((a, b) =>
-    a.localeCompare(b, "es", { sensitivity: "base" }),
-  );
+  const countries = collectCountries(records);
 
   const meta = {
     generatedAt: new Date().toISOString(),
