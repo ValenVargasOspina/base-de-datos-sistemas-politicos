@@ -1,0 +1,2173 @@
+{
+  "countryname": {
+    "label": "Nombre original de la entidad",
+    "definition": "Nombre del país o entidad tal como aparece en la fuente.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Sirve para filtrar; no unir automáticamente nombres históricos.",
+    "section": "General remarks",
+    "kind": "identifier",
+    "bounds": null,
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "ifs": {
+    "label": "Código de entidad (IFS)",
+    "definition": "Código identificado como Country Code en el diccionario breve.",
+    "scale": "Identificador; no es una magnitud.",
+    "reading": "Usar junto con el nombre y el año. La correspondencia internacional exacta requiere confirmación.",
+    "section": "Diccionario breve: ifs",
+    "kind": "identifier",
+    "bounds": null,
+    "codes": {},
+    "limits": "",
+    "status": "Correspondencia del código [por confirmar]",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "year": {
+    "label": "Año de observación",
+    "definition": "Año de referencia de la observación país-año. El manual indica datos al 1 de enero.",
+    "scale": "1975–2020 en esta versión.",
+    "reading": "Comprueba la convención temporal antes de asociar una observación con una elección del mismo año.",
+    "section": "General remarks",
+    "kind": "identifier",
+    "bounds": null,
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gwno": {
+    "label": "Código gwno",
+    "definition": "La documentación revisada no permite confirmar la definición de este identificador.",
+    "scale": "[por confirmar]",
+    "reading": "No usar para cruces ni interpretaciones hasta verificar su fuente.",
+    "section": "Sin definición encontrada",
+    "kind": "identifier",
+    "bounds": null,
+    "codes": {},
+    "limits": "",
+    "status": "[por confirmar]",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "system": {
+    "label": "Sistema político",
+    "definition": "Clasifica la organización del ejecutivo, según sus poderes y la forma de elección y remoción.",
+    "scale": "0 = Presidencial; 1 = Presidente elegido por la asamblea; 2 = Parlamentario.",
+    "reading": "Son categorías, no niveles de democracia. Un ejecutivo no elegido puede aparecer como presidencial.",
+    "section": "SYSTEM",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Presidencial",
+      "Presidential": "Presidencial",
+      "1": "Presidente elegido por la asamblea",
+      "Assembly-Elected President": "Presidente elegido por la asamblea",
+      "2": "Parlamentario",
+      "Parliamentary": "Parlamentario"
+    },
+    "limits": "En sistemas con presidente y primer ministro se aplican reglas específicas sobre veto, nombramiento y disolución del parlamento.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "yrsoffc": {
+    "label": "Años del ejecutivo en el cargo",
+    "definition": "Tiempo del jefe del ejecutivo en el cargo según la regla temporal del manual.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor valor indica mayor permanencia registrada; no demuestra estabilidad del régimen.",
+    "section": "YRSOFFC",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "El primer año tras la elección se registra como 1; hay reglas para golpes fallidos, independencia y gobiernos reconstituidos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "finittrm": {
+    "label": "Mandato de duración limitada",
+    "definition": "Indica si existe un límite constitucional de años antes de convocar nuevas elecciones.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "FINITTRM",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "0 también puede indicar límite no declarado o constitución suspendida o no aplicada.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "yrcurnt": {
+    "label": "Años restantes del mandato",
+    "definition": "Años completos que quedan en el mandato actual.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "0 puede corresponder al año electoral; no significa dato faltante.",
+    "section": "YRCURNT",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "multpl": {
+    "label": "Posibilidad de mandatos adicionales",
+    "definition": "Variable histórica sobre mandatos adicionales del ejecutivo. El manual DPI2020 la declara en revisión.",
+    "scale": "Codificación histórica 0/1, con NA según aplicabilidad.",
+    "reading": "No interpretar automáticamente como autorización constitucional para nuevas reelecciones.",
+    "section": "CHANGES FROM THE PREVIOUS VERSION / MULTPL",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Código histórico 0; interpretación en revisión",
+      "1": "Código histórico 1; interpretación en revisión"
+    },
+    "limits": "No equivale a REELECT ni describe de forma confiable todos los límites a futuras reelecciones.",
+    "status": "En revisión por los autores",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "military": {
+    "label": "Ejecutivo militar",
+    "definition": "Identifica si el jefe del ejecutivo aparece como oficial militar según los criterios de las fuentes.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "MILITARY",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Un militar formalmente retirado al asumir recibe 0.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "defmin": {
+    "label": "Ministro de defensa militar",
+    "definition": "Aplica los criterios de MILITARY al responsable de defensa.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "DEFMIN",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "NA si no existe responsable de defensa ni fuerzas armadas; si el ejecutivo controla directamente la defensa se usa su condición militar.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "reelect": {
+    "label": "Elegibilidad para reelección",
+    "definition": "Indica si el ejecutivo puede ser reelegido, incluidos casos que requieren esperar uno o dos mandatos.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "REELECT",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "0 si está en su último mandato permitido o no puede reelegirse. Interpretar junto con TERMLIMIT.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "allhouse": {
+    "label": "Control de las cámaras por el partido del ejecutivo",
+    "definition": "Indica si el partido del ejecutivo controla por mayoría absoluta las cámaras con poder legislativo.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "ALLHOUSE",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Un Senado designado se considera controlado por el ejecutivo; revisar excepciones del manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "termlimit": {
+    "label": "Límites a la reelección del ejecutivo",
+    "definition": "Regla institucional que limita la posibilidad de reelección. Tabla recuperada del PDF oficial, sección TERMLIMIT (página 12 del PDF).",
+    "scale": "Categorías 1–8; no forman una escala ordenada de intensidad.",
+    "reading": "Lee la categoría exacta y contrasta con REELECT. No promediar los códigos.",
+    "section": "TERMLIMIT — PDF oficial, página 12",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Sin límite a la reelección",
+      "2": "Límite a mandatos consecutivos, sin máximo total",
+      "3": "Máximo de dos mandatos en total",
+      "4": "Máximo de dos mandatos consecutivos",
+      "5": "Prohibición absoluta de reelección",
+      "6": "Máximo de tres mandatos consecutivos",
+      "7": "Reelección después de esperar dos mandatos consecutivos",
+      "8": "Límite a mandatos consecutivos con número fijo de dos"
+    },
+    "limits": "Las categorías 4 y 8 se conservan separadas como en la fuente; no se armonizan. La tabla Markdown estaba desordenada y se contrastó con el PDF oficial.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "percent1": {
+    "label": "Votación presidencial en primera o única vuelta",
+    "definition": "Porcentaje de votos del presidente en la ronda electoral indicada.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "PERCENT1 / PERCENTL",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": "En años sin elección puede repetir el resultado de la elección más reciente. PERCENTL no aplica si no hubo segunda vuelta. Revisar las condiciones según SYSTEM y EIEC. Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "percentl": {
+    "label": "Votación presidencial en última vuelta",
+    "definition": "Porcentaje de votos del presidente en la ronda electoral indicada.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "PERCENT1 / PERCENTL",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": "En años sin elección puede repetir el resultado de la elección más reciente. PERCENTL no aplica si no hubo segunda vuelta. Revisar las condiciones según SYSTEM y EIEC. Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "prtyin": {
+    "label": "Años del partido del ejecutivo en el poder",
+    "definition": "Tiempo del partido del ejecutivo en el gobierno.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Un valor mayor indica más permanencia del partido; no implica que se mantenga el mismo ejecutivo.",
+    "section": "PRTYIN",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Los cambios de nombre pueden reiniciar el conteo, excepto cambios superficiales documentados.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execme": {
+    "label": "Partido del ejecutivo",
+    "definition": "Nombre o sigla de la afiliación partidaria del jefe del ejecutivo.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Identifica partidos y cambios de afiliación; revisa nombres y coaliciones antes de seguirlos en el tiempo.",
+    "section": "EXECME",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "Independent también se usa para monarcas, militares y casos sin partidos según el manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "nonchief": {
+    "label": "Partido del otro jefe del ejecutivo",
+    "definition": "Afiliación del presidente no ceremonial en un sistema parlamentario cuando no es el jefe del ejecutivo identificado por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Consultar junto con SYSTEM y EXECME.",
+    "section": "NONCHIEF",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "NA si el presidente es ceremonial, no existe o SYSTEM es 0 o 1.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execrlc": {
+    "label": "Orientación económica del partido del ejecutivo",
+    "definition": "Posición en política económica clasificada por las fuentes de DPI.",
+    "scale": "0 = Sin información o no clasificable; 1 = Derecha; 2 = Centro; 3 = Izquierda.",
+    "reading": "No mide toda la ideología ni es una escala continua. Cero no significa centro; no calcular promedios mecánicos de los códigos.",
+    "section": "EXECRLC / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin información o no clasificable en este eje",
+      "1": "Derecha",
+      "Right": "Derecha",
+      "2": "Centro",
+      "Center": "Centro",
+      "3": "Izquierda",
+      "Left": "Izquierda"
+    },
+    "limits": "En el ejecutivo puede registrarse su orientación personal si difiere sustancialmente de la del partido. Algunas orientaciones fueron extrapoladas históricamente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execnat": {
+    "label": "Rasgo nacionalista del partido del ejecutivo",
+    "definition": "El programa o las fuentes identifican una orientación nacionalista o de defensa de una identidad nacional o étnica.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execrurl": {
+    "label": "Rasgo rural del partido del ejecutivo",
+    "definition": "Los temas rurales o el campesinado son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execreg": {
+    "label": "Rasgo regional del partido del ejecutivo",
+    "definition": "Una región o sus asuntos son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execrel": {
+    "label": "Característica religiosa del partido del ejecutivo",
+    "definition": "Caracterización religiosa del partido a partir de programa, base y criterios del manual.",
+    "scale": "Categorías 0–6; sin orden de intensidad.",
+    "reading": "Compara categorías; no promediar códigos ni asumir que 0 significa partido laico.",
+    "section": "EXECREL / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Otra o sin característica religiosa registrada",
+      "1": "Cristiano",
+      "Christian": "Cristiano",
+      "2": "Católico",
+      "Catholic": "Católico",
+      "3": "Islámico",
+      "Islamic": "Islámico",
+      "4": "Hindú",
+      "Hindu": "Hindú",
+      "5": "Budista",
+      "Buddhist": "Budista",
+      "6": "Judío",
+      "Jewish": "Judío"
+    },
+    "limits": "No mide la religiosidad de la población ni la de los votantes.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "execage": {
+    "label": "Antigüedad del partido del ejecutivo",
+    "definition": "Tiempo transcurrido desde la formación del partido con su nombre actual, con excepciones para cambios superficiales.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor antigüedad no demuestra mayor institucionalización por sí sola.",
+    "section": "EXECAGE / Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una alianza con nombre nuevo se considera un partido nuevo; examinar cambios de denominación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1rlc": {
+    "label": "Orientación económica del primer partido de gobierno",
+    "definition": "Posición en política económica clasificada por las fuentes de DPI.",
+    "scale": "0 = Sin información o no clasificable; 1 = Derecha; 2 = Centro; 3 = Izquierda.",
+    "reading": "No mide toda la ideología ni es una escala continua. Cero no significa centro; no calcular promedios mecánicos de los códigos.",
+    "section": "EXECRLC / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin información o no clasificable en este eje",
+      "1": "Derecha",
+      "Right": "Derecha",
+      "2": "Centro",
+      "Center": "Centro",
+      "3": "Izquierda",
+      "Left": "Izquierda"
+    },
+    "limits": "En el ejecutivo puede registrarse su orientación personal si difiere sustancialmente de la del partido. Algunas orientaciones fueron extrapoladas históricamente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1nat": {
+    "label": "Rasgo nacionalista del primer partido de gobierno",
+    "definition": "El programa o las fuentes identifican una orientación nacionalista o de defensa de una identidad nacional o étnica.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1rurl": {
+    "label": "Rasgo rural del primer partido de gobierno",
+    "definition": "Los temas rurales o el campesinado son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1reg": {
+    "label": "Rasgo regional del primer partido de gobierno",
+    "definition": "Una región o sus asuntos son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1rel": {
+    "label": "Característica religiosa del primer partido de gobierno",
+    "definition": "Caracterización religiosa del partido a partir de programa, base y criterios del manual.",
+    "scale": "Categorías 0–6; sin orden de intensidad.",
+    "reading": "Compara categorías; no promediar códigos ni asumir que 0 significa partido laico.",
+    "section": "EXECREL / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Otra o sin característica religiosa registrada",
+      "1": "Cristiano",
+      "Christian": "Cristiano",
+      "2": "Católico",
+      "Catholic": "Católico",
+      "3": "Islámico",
+      "Islamic": "Islámico",
+      "4": "Hindú",
+      "Hindu": "Hindú",
+      "5": "Budista",
+      "Buddhist": "Budista",
+      "6": "Judío",
+      "Jewish": "Judío"
+    },
+    "limits": "No mide la religiosidad de la población ni la de los votantes.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1age": {
+    "label": "Antigüedad del primer partido de gobierno",
+    "definition": "Tiempo transcurrido desde la formación del partido con su nombre actual, con excepciones para cambios superficiales.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor antigüedad no demuestra mayor institucionalización por sí sola.",
+    "section": "EXECAGE / Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una alianza con nombre nuevo se considera un partido nuevo; examinar cambios de denominación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2rlc": {
+    "label": "Orientación económica del segundo partido de gobierno",
+    "definition": "Posición en política económica clasificada por las fuentes de DPI.",
+    "scale": "0 = Sin información o no clasificable; 1 = Derecha; 2 = Centro; 3 = Izquierda.",
+    "reading": "No mide toda la ideología ni es una escala continua. Cero no significa centro; no calcular promedios mecánicos de los códigos.",
+    "section": "EXECRLC / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin información o no clasificable en este eje",
+      "1": "Derecha",
+      "Right": "Derecha",
+      "2": "Centro",
+      "Center": "Centro",
+      "3": "Izquierda",
+      "Left": "Izquierda"
+    },
+    "limits": "En el ejecutivo puede registrarse su orientación personal si difiere sustancialmente de la del partido. Algunas orientaciones fueron extrapoladas históricamente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2nat": {
+    "label": "Rasgo nacionalista del segundo partido de gobierno",
+    "definition": "El programa o las fuentes identifican una orientación nacionalista o de defensa de una identidad nacional o étnica.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2rurl": {
+    "label": "Rasgo rural del segundo partido de gobierno",
+    "definition": "Los temas rurales o el campesinado son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2reg": {
+    "label": "Rasgo regional del segundo partido de gobierno",
+    "definition": "Una región o sus asuntos son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2rel": {
+    "label": "Característica religiosa del segundo partido de gobierno",
+    "definition": "Caracterización religiosa del partido a partir de programa, base y criterios del manual.",
+    "scale": "Categorías 0–6; sin orden de intensidad.",
+    "reading": "Compara categorías; no promediar códigos ni asumir que 0 significa partido laico.",
+    "section": "EXECREL / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Otra o sin característica religiosa registrada",
+      "1": "Cristiano",
+      "Christian": "Cristiano",
+      "2": "Católico",
+      "Catholic": "Católico",
+      "3": "Islámico",
+      "Islamic": "Islámico",
+      "4": "Hindú",
+      "Hindu": "Hindú",
+      "5": "Budista",
+      "Buddhist": "Budista",
+      "6": "Judío",
+      "Jewish": "Judío"
+    },
+    "limits": "No mide la religiosidad de la población ni la de los votantes.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2age": {
+    "label": "Antigüedad del segundo partido de gobierno",
+    "definition": "Tiempo transcurrido desde la formación del partido con su nombre actual, con excepciones para cambios superficiales.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor antigüedad no demuestra mayor institucionalización por sí sola.",
+    "section": "EXECAGE / Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una alianza con nombre nuevo se considera un partido nuevo; examinar cambios de denominación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3rlc": {
+    "label": "Orientación económica del tercer partido de gobierno",
+    "definition": "Posición en política económica clasificada por las fuentes de DPI.",
+    "scale": "0 = Sin información o no clasificable; 1 = Derecha; 2 = Centro; 3 = Izquierda.",
+    "reading": "No mide toda la ideología ni es una escala continua. Cero no significa centro; no calcular promedios mecánicos de los códigos.",
+    "section": "EXECRLC / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin información o no clasificable en este eje",
+      "1": "Derecha",
+      "Right": "Derecha",
+      "2": "Centro",
+      "Center": "Centro",
+      "3": "Izquierda",
+      "Left": "Izquierda"
+    },
+    "limits": "En el ejecutivo puede registrarse su orientación personal si difiere sustancialmente de la del partido. Algunas orientaciones fueron extrapoladas históricamente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3nat": {
+    "label": "Rasgo nacionalista del tercer partido de gobierno",
+    "definition": "El programa o las fuentes identifican una orientación nacionalista o de defensa de una identidad nacional o étnica.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3rurl": {
+    "label": "Rasgo rural del tercer partido de gobierno",
+    "definition": "Los temas rurales o el campesinado son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3reg": {
+    "label": "Rasgo regional del tercer partido de gobierno",
+    "definition": "Una región o sus asuntos son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3rel": {
+    "label": "Característica religiosa del tercer partido de gobierno",
+    "definition": "Caracterización religiosa del partido a partir de programa, base y criterios del manual.",
+    "scale": "Categorías 0–6; sin orden de intensidad.",
+    "reading": "Compara categorías; no promediar códigos ni asumir que 0 significa partido laico.",
+    "section": "EXECREL / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Otra o sin característica religiosa registrada",
+      "1": "Cristiano",
+      "Christian": "Cristiano",
+      "2": "Católico",
+      "Catholic": "Católico",
+      "3": "Islámico",
+      "Islamic": "Islámico",
+      "4": "Hindú",
+      "Hindu": "Hindú",
+      "5": "Budista",
+      "Buddhist": "Budista",
+      "6": "Judío",
+      "Jewish": "Judío"
+    },
+    "limits": "No mide la religiosidad de la población ni la de los votantes.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3age": {
+    "label": "Antigüedad del tercer partido de gobierno",
+    "definition": "Tiempo transcurrido desde la formación del partido con su nombre actual, con excepciones para cambios superficiales.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor antigüedad no demuestra mayor institucionalización por sí sola.",
+    "section": "EXECAGE / Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una alianza con nombre nuevo se considera un partido nuevo; examinar cambios de denominación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1rlc": {
+    "label": "Orientación económica del principal partido de oposición",
+    "definition": "Posición en política económica clasificada por las fuentes de DPI.",
+    "scale": "0 = Sin información o no clasificable; 1 = Derecha; 2 = Centro; 3 = Izquierda.",
+    "reading": "No mide toda la ideología ni es una escala continua. Cero no significa centro; no calcular promedios mecánicos de los códigos.",
+    "section": "EXECRLC / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin información o no clasificable en este eje",
+      "1": "Derecha",
+      "Right": "Derecha",
+      "2": "Centro",
+      "Center": "Centro",
+      "3": "Izquierda",
+      "Left": "Izquierda"
+    },
+    "limits": "En el ejecutivo puede registrarse su orientación personal si difiere sustancialmente de la del partido. Algunas orientaciones fueron extrapoladas históricamente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1nat": {
+    "label": "Rasgo nacionalista del principal partido de oposición",
+    "definition": "El programa o las fuentes identifican una orientación nacionalista o de defensa de una identidad nacional o étnica.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1rurl": {
+    "label": "Rasgo rural del principal partido de oposición",
+    "definition": "Los temas rurales o el campesinado son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1reg": {
+    "label": "Rasgo regional del principal partido de oposición",
+    "definition": "Una región o sus asuntos son centrales en el programa o la base del partido.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "EXECNAT / EXECRURL / EXECREG / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El manual registra 0 salvo evidencia explícita; no equivale a una comprobación de ausencia. Para ejecutivos independientes puede registrar la orientación personal.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1rel": {
+    "label": "Característica religiosa del principal partido de oposición",
+    "definition": "Caracterización religiosa del partido a partir de programa, base y criterios del manual.",
+    "scale": "Categorías 0–6; sin orden de intensidad.",
+    "reading": "Compara categorías; no promediar códigos ni asumir que 0 significa partido laico.",
+    "section": "EXECREL / Party Variables in the Legislature",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Otra o sin característica religiosa registrada",
+      "1": "Cristiano",
+      "Christian": "Cristiano",
+      "2": "Católico",
+      "Catholic": "Católico",
+      "3": "Islámico",
+      "Islamic": "Islámico",
+      "4": "Hindú",
+      "Hindu": "Hindú",
+      "5": "Budista",
+      "Buddhist": "Budista",
+      "6": "Judío",
+      "Jewish": "Judío"
+    },
+    "limits": "No mide la religiosidad de la población ni la de los votantes.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1age": {
+    "label": "Antigüedad del principal partido de oposición",
+    "definition": "Tiempo transcurrido desde la formación del partido con su nombre actual, con excepciones para cambios superficiales.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor antigüedad no demuestra mayor institucionalización por sí sola.",
+    "section": "EXECAGE / Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una alianza con nombre nuevo se considera un partido nuevo; examinar cambios de denominación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1me": {
+    "label": "Nombre del primer partido de gobierno",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1seat": {
+    "label": "Escaños del primer partido de gobierno",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov1vote": {
+    "label": "Votación del primer partido de gobierno",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2me": {
+    "label": "Nombre del segundo partido de gobierno",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2seat": {
+    "label": "Escaños del segundo partido de gobierno",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov2vote": {
+    "label": "Votación del segundo partido de gobierno",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3me": {
+    "label": "Nombre del tercer partido de gobierno",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3seat": {
+    "label": "Escaños del tercer partido de gobierno",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gov3vote": {
+    "label": "Votación del tercer partido de gobierno",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1me": {
+    "label": "Nombre del principal partido de oposición",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1seat": {
+    "label": "Escaños del principal partido de oposición",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp1vote": {
+    "label": "Votación del principal partido de oposición",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp2me": {
+    "label": "Nombre del segundo partido de oposición",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp2seat": {
+    "label": "Escaños del segundo partido de oposición",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp2vote": {
+    "label": "Votación del segundo partido de oposición",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp3me": {
+    "label": "Nombre del tercer partido de oposición",
+    "definition": "Nombre o sigla del partido en la posición registrada por DPI.",
+    "scale": "Texto; sin rango numérico.",
+    "reading": "Revisar continuidad de nombres y composición de coaliciones antes de comparar.",
+    "section": "Party Variables in the Legislature",
+    "kind": "text",
+    "bounds": null,
+    "codes": {},
+    "limits": "En sistemas presidenciales GOV1 es el partido del presidente aunque otro tenga más escaños. Independientes se contabilizan como partidos de un escaño.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp3seat": {
+    "label": "Escaños del tercer partido de oposición",
+    "definition": "Número de escaños legislativos asignados al partido en esta posición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Compara con TOTALSEATS para evaluar su peso, conservando la misma cámara y año.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Una posición vacía y cero escaños no significan lo mismo. GOV1 puede no ser el partido más grande.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "opp3vote": {
+    "label": "Votación del tercer partido de oposición",
+    "definition": "Participación en votos del partido en esta posición.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "Party Variables in the Legislature",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "totalseats": {
+    "label": "Total de escaños legislativos",
+    "definition": "Total de escaños de la legislatura, o de la cámara baja si es bicameral; incluye elegidos y designados.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "numgov": {
+    "label": "Escaños del gobierno",
+    "definition": "Total de escaños de los partidos clasificados como gobierno.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "numopp": {
+    "label": "Escaños de la oposición",
+    "definition": "Total de escaños de los partidos clasificados como oposición.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "numul": {
+    "label": "Escaños no alineados o independientes",
+    "definition": "Escaños explícitamente identificados como independientes o no alineados.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "govothst": {
+    "label": "Escaños de otros partidos de gobierno",
+    "definition": "Suma de escaños de partidos gubernamentales fuera de los tres principales.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppothst": {
+    "label": "Escaños de otros partidos de oposición",
+    "definition": "Suma de escaños de partidos opositores fuera de los tres principales.",
+    "scale": "Escaños. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Es un conteo, no un porcentaje. Comparar con el total de escaños y revisar los registros sin afiliación conocida.",
+    "section": "TOTALSEATS / NUMGOV / NUMOPP / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "govoth": {
+    "label": "Otros partidos de gobierno",
+    "definition": "Número de partidos gubernamentales fuera de los tres principales.",
+    "scale": "Partidos. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor número no implica por sí solo más fragmentación: también importa la distribución de escaños.",
+    "section": "Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppoth": {
+    "label": "Otros partidos de oposición",
+    "definition": "Número de partidos opositores fuera de los tres principales.",
+    "scale": "Partidos. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor número no implica por sí solo más fragmentación: también importa la distribución de escaños.",
+    "section": "Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "ulprty": {
+    "label": "Partidos no alineados o independientes",
+    "definition": "Número de partidos o legisladores identificados expresamente como independientes o no alineados.",
+    "scale": "Partidos. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor número no implica por sí solo más fragmentación: también importa la distribución de escaños.",
+    "section": "Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "numvote": {
+    "label": "Votación agregada del gobierno",
+    "definition": "Participación total en votos de los partidos de gobierno.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "NUMVOTE / OPPVOTE / Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppvote": {
+    "label": "Votación agregada de la oposición",
+    "definition": "Participación total en votos de los partidos opositores.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "NUMVOTE / OPPVOTE / Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "govothvt": {
+    "label": "Votación de otros partidos de gobierno",
+    "definition": "Participación total en votos de otros partidos gubernamentales.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "NUMVOTE / OPPVOTE / Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppothvt": {
+    "label": "Votación de otros partidos de oposición",
+    "definition": "El manual define Total Vote Share, pero el diccionario breve la describe como Number of Votes.",
+    "scale": "El manual indica participación en votos; discrepancia con el diccionario breve [por confirmar].",
+    "reading": "Conservar los valores originales. Confirmar escala y ceros antes de comparar o calcular porcentajes.",
+    "section": "NUMVOTE / OPPVOTE / Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": null,
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Escala y significado de ceros [por confirmar]",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "ulvote": {
+    "label": "Votación de no alineados o independientes",
+    "definition": "Participación en votos de partidos o legisladores no alineados o independientes.",
+    "scale": "Porcentaje de votos; intervalo conceptual 0–100 en la escala del Excel.",
+    "reading": "Compara porcentajes y diferencias en puntos porcentuales. No confundir votos con escaños ni dividir otra vez entre 100 al leer la tabla.",
+    "section": "NUMVOTE / OPPVOTE / Other GOVT. PARTIES / Other Opposition Parties / House non-aligned or independent",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": " Los ceros deben contrastarse con las variables relacionadas; no garantizan ausencia efectiva de votos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "herfgov": {
+    "label": "Concentración de los partidos de gobierno",
+    "definition": "Suma de cuadrados de las participaciones en escaños de los partidos de gobierno.",
+    "scale": "Índice conceptual entre 0 y 1.",
+    "reading": "Valores cercanos a 1 indican más concentración; menores valores indican mayor dispersión. No hay cortes universales de alto, medio o bajo en el manual.",
+    "section": "HERFGOV / HERFOPP / HERFTOT",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "Las categorías de otros partidos se aproximan usando su tamaño medio; los independientes cuentan como partidos de un escaño. No recalcular sin reproducir estas reglas.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "herfopp": {
+    "label": "Concentración de los partidos de oposición",
+    "definition": "Suma de cuadrados de las participaciones en escaños de los partidos de oposición.",
+    "scale": "Índice conceptual entre 0 y 1.",
+    "reading": "Valores cercanos a 1 indican más concentración; menores valores indican mayor dispersión. No hay cortes universales de alto, medio o bajo en el manual.",
+    "section": "HERFGOV / HERFOPP / HERFTOT",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "Las categorías de otros partidos se aproximan usando su tamaño medio; los independientes cuentan como partidos de un escaño. No recalcular sin reproducir estas reglas.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "herftot": {
+    "label": "Concentración de todos los partidos legislativos",
+    "definition": "Suma de cuadrados de las participaciones en escaños de todos los partidos legislativos.",
+    "scale": "Índice conceptual entre 0 y 1.",
+    "reading": "Valores cercanos a 1 indican más concentración; menores valores indican mayor dispersión. No hay cortes universales de alto, medio o bajo en el manual.",
+    "section": "HERFGOV / HERFOPP / HERFTOT",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "Las categorías de otros partidos se aproximan usando su tamaño medio; los independientes cuentan como partidos de un escaño. No recalcular sin reproducir estas reglas.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "frac": {
+    "label": "Fragmentación de la legislatura",
+    "definition": "Probabilidad de que dos legisladores seleccionados al azar dentro de la legislatura pertenezcan a partidos distintos.",
+    "scale": "Probabilidad entre 0 y 1.",
+    "reading": "0 corresponde a ausencia de diversidad partidaria bajo la definición; valores mayores indican más fragmentación. No implica mejor o peor funcionamiento. Sin umbrales universales.",
+    "section": "FRAC / GOVFRAC / OPPFRAC",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "El conjunto de referencia cambia entre gobierno, oposición y legislatura. Revisar cobertura antes de comparar.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "govfrac": {
+    "label": "Fragmentación de el gobierno",
+    "definition": "Probabilidad de que dos legisladores seleccionados al azar dentro de el gobierno pertenezcan a partidos distintos.",
+    "scale": "Probabilidad entre 0 y 1.",
+    "reading": "0 corresponde a ausencia de diversidad partidaria bajo la definición; valores mayores indican más fragmentación. No implica mejor o peor funcionamiento. Sin umbrales universales.",
+    "section": "FRAC / GOVFRAC / OPPFRAC",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "El conjunto de referencia cambia entre gobierno, oposición y legislatura. Revisar cobertura antes de comparar.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppfrac": {
+    "label": "Fragmentación de la oposición",
+    "definition": "Probabilidad de que dos legisladores seleccionados al azar dentro de la oposición pertenezcan a partidos distintos.",
+    "scale": "Probabilidad entre 0 y 1.",
+    "reading": "0 corresponde a ausencia de diversidad partidaria bajo la definición; valores mayores indican más fragmentación. No implica mejor o peor funcionamiento. Sin umbrales universales.",
+    "section": "FRAC / GOVFRAC / OPPFRAC",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "El conjunto de referencia cambia entre gobierno, oposición y legislatura. Revisar cobertura antes de comparar.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "maj": {
+    "label": "Proporción de escaños del gobierno",
+    "definition": "NUMGOV dividido entre la suma de escaños de gobierno, oposición y no alineados.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0,5 equivale a la mitad; más de 0,5 representa mayoría sobre el denominador usado. No confundir con porcentaje de votos.",
+    "section": "MAJ",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "La fórmula usa escaños clasificados; puede diferir de dividir por TOTALSEATS si hay afiliaciones desconocidas.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "partyage": {
+    "label": "Antigüedad media de los partidos principales",
+    "definition": "Promedio de GOV1AGE, GOV2AGE y OPP1AGE para los partidos con antigüedad conocida.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Comparar teniendo en cuenta qué partidos entran en cada promedio.",
+    "section": "PARTYAGE",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppmajh": {
+    "label": "Mayoría absoluta opositora en cámara baja",
+    "definition": "Indica si un solo partido de oposición tiene mayoría absoluta en cámara baja.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "OPPMAJH / OPPMAJS",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "No mide una mayoría formada por varios partidos. NA si no existe la cámara; revisar las condiciones del Senado.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "oppmajs": {
+    "label": "Mayoría absoluta opositora en Senado",
+    "definition": "Indica si un solo partido de oposición tiene mayoría absoluta en Senado.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "OPPMAJH / OPPMAJS",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "No mide una mayoría formada por varios partidos. NA si no existe la cámara; revisar las condiciones del Senado.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "dateleg": {
+    "label": "Mes de elección legislativa",
+    "definition": "Mes de la elección registrada según la convención electoral del manual.",
+    "scale": "1–12 = Mes; 13 = Mes desconocido.",
+    "reading": "13 no es diciembre ni un mes adicional. Si hubo varias elecciones, revisar cuál se registra.",
+    "section": "DATELEG / DATEEXEC",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Enero",
+      "2": "Febrero",
+      "3": "Marzo",
+      "4": "Abril",
+      "5": "Mayo",
+      "6": "Junio",
+      "7": "Julio",
+      "8": "Agosto",
+      "9": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre",
+      "13": "Mes desconocido"
+    },
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "dateexec": {
+    "label": "Mes de elección presidencial",
+    "definition": "Mes de la elección registrada según la convención electoral del manual.",
+    "scale": "1–12 = Mes; 13 = Mes desconocido.",
+    "reading": "13 no es diciembre ni un mes adicional. Si hubo varias elecciones, revisar cuál se registra.",
+    "section": "DATELEG / DATEEXEC",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Enero",
+      "2": "Febrero",
+      "3": "Marzo",
+      "4": "Abril",
+      "5": "Mayo",
+      "6": "Junio",
+      "7": "Julio",
+      "8": "Agosto",
+      "9": "Septiembre",
+      "10": "Octubre",
+      "11": "Noviembre",
+      "12": "Diciembre",
+      "13": "Mes desconocido"
+    },
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "legelec": {
+    "label": "Elección legislativa en el año",
+    "definition": "Indica si hubo una elección del tipo señalado durante el año.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "LEGELEC / EXELEC",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El año electoral debe distinguirse del momento de referencia de otras variables, generalmente el 1 de enero.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "exelec": {
+    "label": "Elección del ejecutivo en el año",
+    "definition": "Indica si hubo una elección del tipo señalado durante el año.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "LEGELEC / EXELEC",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El año electoral debe distinguirse del momento de referencia de otras variables, generalmente el 1 de enero.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "liec": {
+    "label": "Competitividad electoral legislativa",
+    "definition": "Índice de competitividad de la elección legislativa o del mecanismo que elige al ejecutivo.",
+    "scale": "Escala ordinal 1–7, con códigos intermedios 3,5; 5,5 y 6,5.",
+    "reading": "Compara categorías de competitividad; las distancias entre códigos no son iguales. No es un índice integral de democracia.",
+    "section": "LIEC / EIEC — PDF oficial, páginas 17–18",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Sin legislatura o ejecutivo según índice",
+      "2": "No elegido",
+      "3": "Elección con un candidato",
+      "3.5": "Competencia incierta dentro de un solo partido",
+      "4": "Un partido y varios candidatos",
+      "5": "Varios partidos legales, solo uno obtiene escaños",
+      "5.5": "Situación intermedia no aclarada entre 5 y 6",
+      "6": "Varios partidos obtienen escaños; el mayor supera el 75 %",
+      "6.5": "Varios partidos obtienen escaños, cuota del mayor desconocida",
+      "7": "Varios partidos obtienen escaños; el mayor tiene menos del 75 %"
+    },
+    "limits": "EIEC adapta la escala al órgano que elige al ejecutivo y aplica excepciones para golpes, sucesión legal y mandatos vitalicios. Los códigos 5–7 de la tabla se describen originalmente con escaños legislativos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "eiec": {
+    "label": "Competitividad electoral del ejecutivo",
+    "definition": "Índice de competitividad de la elección legislativa o del mecanismo que elige al ejecutivo.",
+    "scale": "Escala ordinal 1–7, con códigos intermedios 3,5; 5,5 y 6,5.",
+    "reading": "Compara categorías de competitividad; las distancias entre códigos no son iguales. No es un índice integral de democracia.",
+    "section": "LIEC / EIEC — PDF oficial, páginas 17–18",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Sin legislatura o ejecutivo según índice",
+      "2": "No elegido",
+      "3": "Elección con un candidato",
+      "3.5": "Competencia incierta dentro de un solo partido",
+      "4": "Un partido y varios candidatos",
+      "5": "Varios partidos legales, solo uno obtiene escaños",
+      "5.5": "Situación intermedia no aclarada entre 5 y 6",
+      "6": "Varios partidos obtienen escaños; el mayor supera el 75 %",
+      "6.5": "Varios partidos obtienen escaños, cuota del mayor desconocida",
+      "7": "Varios partidos obtienen escaños; el mayor tiene menos del 75 %"
+    },
+    "limits": "EIEC adapta la escala al órgano que elige al ejecutivo y aplica excepciones para golpes, sucesión legal y mandatos vitalicios. Los códigos 5–7 de la tabla se describen originalmente con escaños legislativos.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "mdmh": {
+    "label": "Magnitud media de distrito de la cámara baja",
+    "definition": "Promedio ponderado de representantes elegidos por circunscripción; si falta información, puede aproximarse con escaños entre circunscripciones.",
+    "scale": "Representantes por distrito. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Un valor mayor significa más representantes por circunscripción. Revisar comparabilidad y método de aproximación.",
+    "section": "MDMH / MDMS",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Indirect identifica elección indirecta y no es un número. Hay extrapolaciones temporales bajo reglas del manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "mdms": {
+    "label": "Magnitud media de distrito del Senado",
+    "definition": "Promedio ponderado de representantes elegidos por circunscripción; si falta información, puede aproximarse con escaños entre circunscripciones.",
+    "scale": "Representantes por distrito. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Un valor mayor significa más representantes por circunscripción. Revisar comparabilidad y método de aproximación.",
+    "section": "MDMH / MDMS",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "Indirect identifica elección indirecta y no es un número. Hay extrapolaciones temporales bajo reglas del manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "ssh": {
+    "label": "Peso del Senado en los escaños totales",
+    "definition": "Escaños del Senado divididos entre los escaños conjuntos de Senado y cámara baja.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0,45 equivale al 45 % del total conjunto. No equivale al poder efectivo del Senado.",
+    "section": "SSH",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "No aplica a varios tipos de Senado designado; revisar las condiciones del manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "pluralty": {
+    "label": "Uso de regla de pluralidad",
+    "definition": "Uso de regla winner-take-all / first-past-the-post para elegir legisladores.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "PLURALITY",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Aplican reglas específicas según competitividad electoral y tipo de sistema; consultar el manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "pr": {
+    "label": "Uso de representación proporcional",
+    "definition": "Elección basada en la participación de votos del partido o sistema definido como proporcional por las fuentes.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "PR",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Aplican reglas específicas según competitividad electoral y tipo de sistema; consultar el manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "dhondt": {
+    "label": "Uso del método D’Hondt",
+    "definition": "Uso de D’Hondt para asignar escaños en representación proporcional.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "DHONDT",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Aplican reglas específicas según competitividad electoral y tipo de sistema; consultar el manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "cl": {
+    "label": "Listas cerradas",
+    "definition": "El votante no puede expresar preferencias por candidatos dentro de la lista.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "CL",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "Aplican reglas específicas según competitividad electoral y tipo de sistema; consultar el manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "fraud": {
+    "label": "Irregularidades electorales registradas",
+    "definition": "Fraude, intimidación u otras irregularidades suficientemente relevantes para afectar el resultado según las fuentes.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "FRAUD",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "0 incluye irregularidades no mencionadas por las fuentes; no demuestra elecciones limpias. Se pueden registrar denuncias opositoras y boicots. En años sin elección se conserva la referencia a la más reciente.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "housesys": {
+    "label": "Regla predominante de la cámara baja",
+    "definition": "Regla que determina la mayoría de los escaños de la cámara.",
+    "scale": "0 = Representación proporcional; 1 = Pluralidad. Puede aparecer Indirect según la cámara.",
+    "reading": "Categoría de la regla predominante; no es un porcentaje ni una escala de calidad.",
+    "section": "HOUSESYS / SENSYS",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Representación proporcional",
+      "PR": "Representación proporcional",
+      "1": "Pluralidad",
+      "Plurality": "Pluralidad",
+      "Indirect": "Elección indirecta"
+    },
+    "limits": "Códigos adicionales como .5 o −888 observados en el Excel no se reinterpretan sin documentación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "sensys": {
+    "label": "Regla predominante del Senado",
+    "definition": "Regla que determina la mayoría de los escaños de la cámara.",
+    "scale": "0 = Representación proporcional; 1 = Pluralidad. Puede aparecer Indirect según la cámara.",
+    "reading": "Categoría de la regla predominante; no es un porcentaje ni una escala de calidad.",
+    "section": "HOUSESYS / SENSYS",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Representación proporcional",
+      "PR": "Representación proporcional",
+      "1": "Pluralidad",
+      "Plurality": "Pluralidad",
+      "Indirect": "Elección indirecta"
+    },
+    "limits": "Códigos adicionales como .5 o −888 observados en el Excel no se reinterpretan sin documentación.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "thresh": {
+    "label": "Umbral electoral de representación",
+    "definition": "Votación mínima para obtener un escaño en representación proporcional; si hay varios umbrales se registra el que rige más escaños.",
+    "scale": "Porcentaje, conceptualmente 0–100. Atención: 0 se usa si las fuentes no informan.",
+    "reading": "Mayor umbral exige una participación mínima mayor. No concluir que 0 significa ausencia de barrera.",
+    "section": "THRESH",
+    "kind": "number",
+    "bounds": [
+      0,
+      100
+    ],
+    "codes": {},
+    "limits": "No convertir códigos negativos distintos de −999 en datos válidos ni en faltantes sin revisión.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "select": {
+    "label": "Selección de candidaturas",
+    "definition": "Nivel o mecanismo de selección de los candidatos del partido.",
+    "scale": "1 = Nacional; 2 = Subnacional; 3 = Primarias.",
+    "reading": "Categorías sin orden de calidad. Un código mayor no implica una selección mejor o más democrática.",
+    "section": "SELECT",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "1": "Nacional",
+      "National": "Nacional",
+      "2": "Subnacional",
+      "Sub-National": "Subnacional",
+      "3": "Primarias",
+      "Primary": "Primarias"
+    },
+    "limits": "Cobertura muy limitada: revisar años y entidades disponibles.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "gq": {
+    "label": "Tipo de cuota de género",
+    "definition": "Presencia y tipo de cuota legal, constitucional o voluntaria de partidos.",
+    "scale": "0 = Sin cuotas; 1 = Escaños reservados; 2 = Cuota en listas; 3 = Cuota voluntaria de algún partido.",
+    "reading": "Compara tipos, no intensidad ni efectividad. El código 3 se registra desde la primera implementación voluntaria por un partido.",
+    "section": "GQ",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin cuotas",
+      "1": "Escaños reservados",
+      "2": "Cuota en listas de candidaturas",
+      "3": "Cuota voluntaria de partido"
+    },
+    "limits": "",
+    "status": "Documentada en el manual",
+    "missing": "Vacío y NA se conservan. Para GQ, −999 significa sin información según el manual; no necesariamente no aplicable."
+  },
+  "gqi": {
+    "label": "Implementación de cuota de género",
+    "definition": "Indica 1 desde la implementación efectiva y 0 si aún no se ha implementado, según la definición detallada del manual.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "GQI",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "El encabezado habla de año, pero la definición usa 0/1. El Excel contiene también 2, sin explicación confirmada. No leer esta columna como año calendario.",
+    "status": "Discrepancia de codificación [por confirmar]",
+    "missing": "Para GQI, −999 significa sin información. El código 2 queda [por confirmar]."
+  },
+  "tenlong": {
+    "label": "Mayor permanencia de un actor de veto",
+    "definition": "Tiempo en el cargo del actor de veto con la mayor o menor permanencia, según la variable.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Contrasta con la composición de los actores de veto; no equivale automáticamente a estabilidad democrática.",
+    "section": "TENLONG / TENSHORT",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6. Por debajo del umbral solo cuenta el ejecutivo. La definición de actores depende de SYSTEM.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "tenlong_strict": {
+    "label": "Mayor permanencia de un actor de veto (estricto)",
+    "definition": "Tiempo en el cargo del actor de veto con la mayor o menor permanencia, según la variable.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Contrasta con la composición de los actores de veto; no equivale automáticamente a estabilidad democrática.",
+    "section": "TENLONG / TENSHORT",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6. Por debajo del umbral solo cuenta el ejecutivo. La definición de actores depende de SYSTEM.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "tenshort": {
+    "label": "Menor permanencia de un actor de veto",
+    "definition": "Tiempo en el cargo del actor de veto con la mayor o menor permanencia, según la variable.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Contrasta con la composición de los actores de veto; no equivale automáticamente a estabilidad democrática.",
+    "section": "TENLONG / TENSHORT",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6. Por debajo del umbral solo cuenta el ejecutivo. La definición de actores depende de SYSTEM.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "tenshort_strict": {
+    "label": "Menor permanencia de un actor de veto (estricto)",
+    "definition": "Tiempo en el cargo del actor de veto con la mayor o menor permanencia, según la variable.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Contrasta con la composición de los actores de veto; no equivale automáticamente a estabilidad democrática.",
+    "section": "TENLONG / TENSHORT",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6. Por debajo del umbral solo cuenta el ejecutivo. La definición de actores depende de SYSTEM.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "tensys": {
+    "label": "Permanencia del sistema político",
+    "definition": "Si EIEC es menor que 6, usa YRSOFFC; con EIEC 6 o 7 cuenta la continuidad de esa condición.",
+    "scale": "Años. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Mayor valor indica continuidad según esta regla; no significa mayor calidad democrática.",
+    "section": "TENSYS",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "La serie incorpora información anterior a 1975 y reglas para primeros valores.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "tensys_strict": {
+    "label": "Permanencia del sistema (versión estricta)",
+    "definition": "La distinción específica entre TENSYS y TENSYS_STRICT no está definida explícitamente en el manual revisado.",
+    "scale": "[por confirmar]",
+    "reading": "No transferir automáticamente las reglas de TENSYS. Se muestra el rango observado sin interpretación sustantiva.",
+    "section": "TENSYS; versión estricta sin definición explícita",
+    "kind": "number",
+    "bounds": null,
+    "codes": {},
+    "limits": "",
+    "status": "[por confirmar]",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "checks": {
+    "label": "Controles y contrapesos",
+    "definition": "Conteo construido de controles institucionales y partidarios, considerando competitividad, cámaras, coaliciones, listas y orientación económica.",
+    "scale": "Unidades del índice. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Más unidades indican más controles bajo la construcción de DPI; no se interpreta como porcentaje ni se usan cortes universales.",
+    "section": "CHECKS / CHECKS_LAX",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "CHECKS usa umbral LIEC/EIEC de 6; CHECKS_LAX de 5. Bajo el umbral el índice es 1. La reproducción de la fórmula completa requiere validación adicional.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "checks_lax": {
+    "label": "Controles y contrapesos (umbral alternativo)",
+    "definition": "Conteo construido de controles institucionales y partidarios, considerando competitividad, cámaras, coaliciones, listas y orientación económica.",
+    "scale": "Unidades del índice. Valores no negativos; sin máximo universal documentado.",
+    "reading": "Más unidades indican más controles bajo la construcción de DPI; no se interpreta como porcentaje ni se usan cortes universales.",
+    "section": "CHECKS / CHECKS_LAX",
+    "kind": "number",
+    "bounds": [
+      0,
+      null
+    ],
+    "codes": {},
+    "limits": "CHECKS usa umbral LIEC/EIEC de 6; CHECKS_LAX de 5. Bajo el umbral el índice es 1. La reproducción de la fórmula completa requiere validación adicional.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "stabs": {
+    "label": "Salida de actores de veto",
+    "definition": "Fracción de actores de veto del periodo anterior que salen del gobierno en el año, con las reglas institucionales de DPI.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0 = Ninguna salida registrada; 1 = Sale el conjunto de referencia. Un valor mayor significa más renovación o salida, aunque la variable se denomine estabilidad.",
+    "section": "STABILITY / STABS / STABNS",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6 en el año anterior. STABNS ignora la segunda cámara; el texto del manual contiene una referencia cruzada ambigua.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "stabs_strict": {
+    "label": "Salida de actores de veto (estricto)",
+    "definition": "Fracción de actores de veto del periodo anterior que salen del gobierno en el año, con las reglas institucionales de DPI.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0 = Ninguna salida registrada; 1 = Sale el conjunto de referencia. Un valor mayor significa más renovación o salida, aunque la variable se denomine estabilidad.",
+    "section": "STABILITY / STABS / STABNS",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6 en el año anterior. STABNS ignora la segunda cámara; el texto del manual contiene una referencia cruzada ambigua.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "stabns": {
+    "label": "Salida de actores de veto sin segunda cámara",
+    "definition": "Fracción de actores de veto del periodo anterior que salen del gobierno en el año, con las reglas institucionales de DPI.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0 = Ninguna salida registrada; 1 = Sale el conjunto de referencia. Un valor mayor significa más renovación o salida, aunque la variable se denomine estabilidad.",
+    "section": "STABILITY / STABS / STABNS",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6 en el año anterior. STABNS ignora la segunda cámara; el texto del manual contiene una referencia cruzada ambigua.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "stabns_strict": {
+    "label": "Salida de actores de veto sin segunda cámara (estricto)",
+    "definition": "Fracción de actores de veto del periodo anterior que salen del gobierno en el año, con las reglas institucionales de DPI.",
+    "scale": "Proporción entre 0 y 1.",
+    "reading": "0 = Ninguna salida registrada; 1 = Sale el conjunto de referencia. Un valor mayor significa más renovación o salida, aunque la variable se denomine estabilidad.",
+    "section": "STABILITY / STABS / STABNS",
+    "kind": "number",
+    "bounds": [
+      0,
+      1
+    ],
+    "codes": {},
+    "limits": "La versión estándar usa umbral LIEC de 5 y la estricta de 6 en el año anterior. STABNS ignora la segunda cámara; el texto del manual contiene una referencia cruzada ambigua.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "polariz": {
+    "label": "Polarización económica entre partidos relevantes",
+    "definition": "Máxima diferencia de orientación económica entre el partido del ejecutivo y los tres principales partidos de gobierno y el principal opositor.",
+    "scale": "0, 1 o 2 según las diferencias entre las categorías económicas.",
+    "reading": "0 no siempre significa acuerdo ideológico: también se asigna si LIEC o EIEC son menores que 5 o si el partido del ejecutivo tiene mayoría absoluta.",
+    "section": "POLARIZ",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin diferencia según regla o cero institucional",
+      "1": "Diferencia de una categoría",
+      "2": "Diferencia de dos categorías"
+    },
+    "limits": "No mide polarización social ni toda la ideología. Revisar la disponibilidad de orientaciones antes de comparar.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "auton": {
+    "label": "Regiones autónomas",
+    "definition": "Existencia de regiones explícitamente autónomas y constitucionalmente reconocidas según las fuentes.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "AUTON",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "0 también se usa si no hay información. No incluye distritos capitales ni reservas indígenas bajo la definición del manual.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "muni": {
+    "label": "Elección del gobierno municipal",
+    "definition": "Forma de elección de ejecutivo y legislatura en el nivel subnacional correspondiente.",
+    "scale": "0, 1 y 2 según qué autoridades se eligen localmente.",
+    "reading": "Describe la forma de elección, no el grado total de autonomía ni la calidad de la gestión.",
+    "section": "MUNI / STATE",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin elecciones locales de ejecutivo ni legislatura",
+      "No local elections": "Sin elecciones locales de ejecutivo ni legislatura",
+      "1": "Legislatura elegida; ejecutivo designado",
+      "Legislature locally elected": "Legislatura elegida; ejecutivo designado",
+      "2": "Ejecutivo y legislatura elegidos localmente",
+      "Legislature and executive locally elected": "Ejecutivo y legislatura elegidos localmente"
+    },
+    "limits": "MUNI usa el nivel subnacional más bajo y STATE el más alto. Revisar reglas para elección indirecta; no extrapolar años sin información.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "state": {
+    "label": "Elección del gobierno estatal o provincial",
+    "definition": "Forma de elección de ejecutivo y legislatura en el nivel subnacional correspondiente.",
+    "scale": "0, 1 y 2 según qué autoridades se eligen localmente.",
+    "reading": "Describe la forma de elección, no el grado total de autonomía ni la calidad de la gestión.",
+    "section": "MUNI / STATE",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "Sin elecciones locales de ejecutivo ni legislatura",
+      "No local elections": "Sin elecciones locales de ejecutivo ni legislatura",
+      "1": "Legislatura elegida; ejecutivo designado",
+      "Legislature locally elected": "Legislatura elegida; ejecutivo designado",
+      "2": "Ejecutivo y legislatura elegidos localmente",
+      "Legislature and executive locally elected": "Ejecutivo y legislatura elegidos localmente"
+    },
+    "limits": "MUNI usa el nivel subnacional más bajo y STATE el más alto. Revisar reglas para elección indirecta; no extrapolar años sin información.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "author": {
+    "label": "Atribuciones estatales o provinciales",
+    "definition": "Indica si el nivel estatal o provincial tiene autoridad tributaria, de gasto o legislativa: basta una de ellas.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "AUTHOR",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "1 no significa que tenga las tres facultades ni mide su intensidad. Asuntos culturales o planificación en sistemas comunistas no bastan.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  },
+  "stconst": {
+    "label": "Circunscripciones senatoriales estatales o provinciales",
+    "definition": "Indica si las circunscripciones que eligen a la mayoría de senadores corresponden a estados o provincias.",
+    "scale": "0 = No; 1 = Sí.",
+    "reading": "Compara presencia y ausencia de la característica. No es una escala de intensidad.",
+    "section": "STCONST",
+    "kind": "category",
+    "bounds": null,
+    "codes": {
+      "0": "No",
+      "1": "Sí"
+    },
+    "limits": "NA si no hay Senado o estados/provincias. Senado designado o elegido nacionalmente recibe 0.",
+    "status": "Documentada en el manual",
+    "missing": "Vacío: información no disponible. NA o −999: por regla general, no aplicable; revisar las excepciones de esta ficha. Cero es un valor registrado y su significado depende de la variable."
+  }
+}

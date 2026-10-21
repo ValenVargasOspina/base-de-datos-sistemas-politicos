@@ -15,7 +15,7 @@ Selección de uno, varios o todos los nombres originales; periodo; agrupación t
 7. Revisa la cuenta o equipo de destino y despliega. Verifica el enlace resultante antes de compartirlo.
 
 ## Comprobaciones ejecutadas
-`node --check public/app.js` y `npm run build`.
+`node --check public/app.js` y `npm run build`, incluidos los controles de las 129 fichas.
 La extracción Python comprueba igualdad de todas las celdas con el JSON. Se contrastan las seis coberturas del §10 del documento de alcance. La fecha Excel de `year` se convierte a año entero. Los demás valores se preservan sin redondeo ni imputación.
 
 ## Regenerar datos
@@ -23,11 +23,14 @@ Con Python y openpyxl disponibles: `python scripts/prepare.py`. Conserva el Exce
 
 ## Pendientes antes de usar con estudiantes
 - Prueba visual y funcional en navegador del despliegue.
-- Fichas verificadas en español, unidades y códigos de las 129 variables; actualmente se conserva la descripción breve en inglés y se enlaza el manual aportado.
-- Resolver gwno, tensys_strict, oppothvt, termlimit y multpl. Sus valores originales se muestran sin interpretación.
+- Revisión académica de las 129 fichas explicativas en español. Incluyen escala conceptual, códigos, rango observado dinámico y precauciones, con referencia al manual.
+- Resolver gwno, tensys_strict y la discrepancia de oppothvt. MULTPL sigue en revisión por los autores; GQI presenta valores 2 no explicados. TERMLIMIT se contrastó con la tabla del PDF oficial.
 - Revisar agrupación temática y usos pedagógicos.
 - Los cambios detectados no equivalen a hitos históricos. No se incluyen hitos ni fuentes nuevas posteriores a 2020.
 - Confirmar licencia, condiciones de redistribución y revisión institucional antes de difusión académica.
 
 ## Fuente
 Cruz, Keefer y Scartascini (2021), Database of Political Institutions 2020, BID. DOI https://doi.org/10.18235/0003049. Herramienta educativa sin afiliación con el BID. No se presenta como herramienta institucional autorizada de EAFIT.
+
+## Guía de variables
+Las ayudas pedagógicas se generan con `python scripts/build-guide.py`. El original no se modifica. Las escalas no se convierten en umbrales arbitrarios de calidad. Las fichas advierten códigos fuera de la escala documentada y distinguen rango conceptual de rango observado. Para GQ y GQI, −999 significa sin información.
