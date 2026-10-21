@@ -34,3 +34,8 @@ Cruz, Keefer y Scartascini (2021), Database of Political Institutions 2020, BID.
 
 ## Guía de variables
 Las ayudas pedagógicas se generan con `python scripts/build-guide.py`. El original no se modifica. Las escalas no se convierten en umbrales arbitrarios de calidad. Las fichas advierten códigos fuera de la escala documentada y distinguen rango conceptual de rango observado. Para GQ y GQI, −999 significa sin información.
+
+## Mapa mundial
+Mapa interactivo Natural Earth 1:110m con puntos de etiquetas 1:50m para estados pequeños. Selección sincronizada con la lista, filtros, tablas y gráficos. 177 nombres DPI tienen correspondencia de navegación; seis entidades históricas o con delimitación pendiente se seleccionan en un panel separado. No se unen registros de nombres que comparten ubicación. El color indica presencia en DPI, no cobertura de una variable.
+
+`python scripts/build-map.py` regenera la capa; descarga Natural Earth si no están disponibles las fuentes locales. `npm run check:map` comprueba que las 183 entidades se conservan y que los nombres históricos no se fusionan. Las fuentes y la huella de la geometría están en `public/data/world-map.json`. Natural Earth es de dominio público: https://www.naturalearthdata.com/about/terms-of-use/.

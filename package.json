@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "check": "node --check public/app.js",
-    "build": "node scripts/check-data.mjs && node scripts/check-guide.mjs",
-    "check:guide": "node scripts/check-guide.mjs"
+    "build": "node scripts/check-data.mjs && node scripts/check-guide.mjs && node scripts/check-map.mjs",
+    "check:guide": "node scripts/check-guide.mjs",
+    "check:map": "node scripts/check-map.mjs"
   }
 }
